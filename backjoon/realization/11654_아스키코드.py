@@ -1,0 +1,1 @@
+data = print(ord(input()))
