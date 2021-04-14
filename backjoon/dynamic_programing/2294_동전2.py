@@ -1,19 +1,16 @@
 n, k = map(int, input().split())
 arr = []
+INF = int(1e9)
 for _ in range(n):
     arr.append(int(input()))
-d = [0] * (k+1)
-d_dict = {}
+d = [INF] * (100001)
 d[0] = 0
 
-for i in range(1, k+1):
-    d_dict[i] = []
-for idx in range(len(arr)):
+for coin in arr:
     for i in range(1, k+1):
-        if arr[idx] == i:
-            d[i] += 1
-        elif i > arr[idx]:
-            d[i] += d[i-arr[idx]]
-            if idx == len(arr)-1 and i == k:
-                print(d[i-arr[idx]])
-            
+        if coin == i:
+            d[i] = 1
+        elif i > coin:
+            d[i] = min(d[i], d[i-coin]+1)
+
+print(d[k] if d[k] != INF else -1)
