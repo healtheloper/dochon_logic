@@ -1,5 +1,7 @@
-N=10
-S=[2, 3, 5, 6]
+n, k = map(int, input().split())
+arr = []
+for _ in range(n):
+    arr.append(int(input()))
 d = [0] * (N+1)
 d[0] = 0
 
