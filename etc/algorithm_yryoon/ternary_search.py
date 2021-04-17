@@ -5,7 +5,7 @@ def ternarySearch(low, high, find_value, values):
         # 두 번째 구분 값
         mid2 = low + 2*(high-low)//3
 
-        # 값을 찾았다면 return
+        # 인덱스 값을 찾았다면 return
         if values[mid1] == find_value:
             return mid1
         if values[mid2] == find_value:
