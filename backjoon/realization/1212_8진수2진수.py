@@ -1,10 +1,18 @@
+import sys
+input = sys.stdin.readline
 n = input()
 arr = []
 result = ""
-for i in range(len(n)):
-    toBinary = int(n[i])
+n_len = len(n)
+# 333,334
+for i in range(n_len):
+    if n[i] != '\n':
+        toBinary = int(n[i])
+    else:
+        continue
     temp = []
     count = 4
+    # 3 = 
     for _ in range(3):
         quotient = toBinary // count
         toBinary %= count
