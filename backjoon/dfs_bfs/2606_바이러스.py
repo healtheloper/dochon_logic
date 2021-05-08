@@ -23,4 +23,5 @@ for _ in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
+print(graph)
 print(bfs(graph, 1, visited, count)-1)
