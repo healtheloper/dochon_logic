@@ -1,7 +1,7 @@
 n = int(input())
 col = [0] * (n+1)
-result = 0
 
+result = 0
 def promising(i):
     for j in range(1, i):
         if col[i] == col[j] or abs(col[i]-col[j]) == i-j:
@@ -23,4 +23,4 @@ def queens(i):
             if promising(i+1):
                 queens(i+1)
 queens(0)
-print(result)
+print("Total number: ", result)

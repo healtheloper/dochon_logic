@@ -1,7 +1,7 @@
 n = int(input())
 col = [0] * (n+1)
-result = 0
 
+result = 0
 def promising(i):
     for j in range(1, i):
         if col[i] == col[j] or abs(col[i]-col[j]) == i-j:
@@ -20,7 +20,16 @@ def queens(i):
     else:
         for j in range(1, n+1):
             col[i+1]=j
-            if promising(i+1):
+            if not promising(i+1):
+                print(col, "❌ no promising")
+                # col 의 끝(n)까지 확인하였으나, No promising 하다면
+                if j == n:
+                    col[i+1]=0
+                    if col[i] == n:
+                        col[i]=0
+                
+            else:
+                print(col, "✅ promising")
                 queens(i+1)
-queens(0)
-print(result)
+queens(1)
+print("Total number: ", result)
