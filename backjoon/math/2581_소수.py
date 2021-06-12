@@ -1,5 +1,5 @@
 n = int(input())
-datas = list(map(int, input().split()))
+m = int(input())
 result = 0
 min_val = int(1e9)
 def isPrime(num):
@@ -12,10 +12,10 @@ def isPrime(num):
         if count > 1:
             return False
     return True
-for data in datas:
+for data in range(n, m+1):
     if isPrime(data):
         result += data
-        min_val = min(result, min)
+        min_val = min(result, min_val)
 
 if result != 0:
     print(result)
