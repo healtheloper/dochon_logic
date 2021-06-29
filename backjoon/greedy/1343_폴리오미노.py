@@ -12,7 +12,6 @@ while check:
             continue
         while total_len > 0:
             if total_len % 2 == 1:
-                print(-1)
                 check = False
                 break
             if total_len > 3:
@@ -26,3 +25,5 @@ while check:
 arr.pop()
 if check == True:
     print(''.join(arr))
+else:
+    print(-1)
