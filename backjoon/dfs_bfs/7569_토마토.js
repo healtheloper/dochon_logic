@@ -39,11 +39,17 @@ const solution = ([info, ...rest]) => {
           z = a + dh[j];
           x = b + dy[j];
           y = c + dx[j];
-          if (x >= 0 && x < n && y >= 0 && y < m && z >= 0 && z < h) {
-            if (floorArray[z][x][y] === 0) {
-              temp_q.push([z, x, y]);
-              floorArray[z][x][y] = 1;
-            }
+          if (
+            x >= 0 &&
+            x < n &&
+            y >= 0 &&
+            y < m &&
+            z >= 0 &&
+            z < h &&
+            floorArray[z][x][y] === 0
+          ) {
+            temp_q.push([z, x, y]);
+            floorArray[z][x][y] = 1;
           }
         }
       }
