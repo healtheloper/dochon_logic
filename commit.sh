@@ -2,22 +2,22 @@
 
 git pull origin master
 
-echo "> pull complete"
+echo "> ✅ pull complete"
 
 git add .
 
-echo "> add all files"
+echo "> ✅ add all files"
 
 if [ $# -eq 0 ]; then
-    read -p "> enter commit message : " COMMIT_MESSAGE
+    read -p "> 💻 enter commit message : " COMMIT_MESSAGE
 else
     COMMIT_MESSAGE=${1}
 fi
 
 git commit -m "${COMMIT_MESSAGE}"
 
-echo "> commit complete"
+echo "> ✅ commit complete"
 
 git push origin master
 
-echo "> push complete"
+echo "> ✅ push complete"
