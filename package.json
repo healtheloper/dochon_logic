@@ -1,0 +1,21 @@
+{
+  "name": "dochon_logic",
+  "version": "1.0.0",
+  "description": "## 백준",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "sh commit.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healtheloper/dochon_logic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/healtheloper/dochon_logic/issues"
+  },
+  "homepage": "https://github.com/healtheloper/dochon_logic#readme"
+}

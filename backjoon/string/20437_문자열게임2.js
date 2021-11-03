@@ -31,7 +31,6 @@ const solution = (input) => {
           if (charCount === k) {
             min = Math.min(z - j + 1, min);
             max = Math.max(z - j + 1, max);
-            charCount = 1;
             break;
           }
         }
