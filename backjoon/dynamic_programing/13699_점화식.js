@@ -6,9 +6,9 @@ const rl = readline.createInterface({
 });
 
 const solution = (input) => {
-  const arr = [1];
+  const arr = [BigInt(1)];
   for (let i = 1; i <= 35; i++) {
-    let temp = 0;
+    let temp = BigInt(0);
     for (let j = 0; j < i; j++) {
       temp += arr[j] * arr[i - j - 1];
     }
