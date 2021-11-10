@@ -14,8 +14,7 @@ const solution = (input) => {
     }
     arr.push(temp);
   }
-
-  return arr[input];
+  return arr[input] + "";
 };
 
 rl.on("line", (answer) => {
