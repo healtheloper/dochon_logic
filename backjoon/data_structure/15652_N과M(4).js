@@ -8,7 +8,6 @@ const input = [];
 
 const solution = (input) => {
   const [n, m] = input[0].split(" ").map((v) => +v);
-  const array = new Array(n).fill(null).map((v, i) => i + 1);
   const result = [];
   let output = "";
   const dfs = (idx, cnt) => {
