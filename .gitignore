@@ -5,6 +5,7 @@ test2.py
 template.js
 template2.js
 template3.js
+template_*
 .vscode
 tasks.json
 time_*
