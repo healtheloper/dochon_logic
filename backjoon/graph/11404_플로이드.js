@@ -7,7 +7,6 @@ const rl = readline.createInterface({
 const input = [];
 
 const solution = (input) => {
-  let answer = 0;
   const [n, m, ...infos] = input;
   const array = new Array(+n)
     .fill(null)
@@ -24,7 +23,12 @@ const solution = (input) => {
       }
     }
   }
-  return array.map((v) => v.join(" ")).join("\n");
+  return array
+    .map((v) => {
+      const tempV = v.map((item) => (item === Infinity ? 0 : item));
+      return tempV.join(" ");
+    })
+    .join("\n");
 };
 
 rl.on("line", (answer) => {
