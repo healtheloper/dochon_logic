@@ -1,4 +1,5 @@
 #!/bin/sh
+today=`date +%y.%m.%d`
 
 git pull origin master
 
@@ -14,7 +15,7 @@ else
     COMMIT_MESSAGE=${1}
 fi
 
-git commit -m "${COMMIT_MESSAGE}"
+git commit -m "$today ${COMMIT_MESSAGE}"
 
 echo "> ✅ commit complete"
 
