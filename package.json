@@ -4,8 +4,11 @@
   "description": "## 백준",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "sh commit.sh"
+    "commit": "sh commit.sh",
+    "commit:bj": "sh commit.sh Backjoon",
+    "commit:pg": "sh commit.sh programmers",
+    "commit:hr": "sh commit.sh HackerRank",
+    "commit:lc": "sh commit.sh leetcode"
   },
   "repository": {
     "type": "git",
